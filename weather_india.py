@@ -78,7 +78,5 @@ def main():
     else:
         print(f'\n{city_name.title()} is not currently present in our list of Indian cities :(\n')
 
-
-
 if __name__ == '__main__':
     main()
