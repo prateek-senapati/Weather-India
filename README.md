@@ -13,8 +13,8 @@
   * Humidity percentage
   * Wind speed (km/hr)
   * Cloudiness percentage
-  * Sunrise time (UTC)
-  * Sunset time (UTC)
+  * Sunrise time (local time; IST in India)
+  * Sunset time (local time; IST in India)
   
 ### Modules Used
 
