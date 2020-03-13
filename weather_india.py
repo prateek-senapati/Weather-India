@@ -16,7 +16,7 @@ def setup(city_code):
 def fetch_data(city_id):
     base_url = 'https://api.openweathermap.org/data/2.5/weather?id='
     # Refer to README.md for instructions on API key generation and creation of configuration file
-    app_id = config.api_key
+    app_id = config.api_key     # Assign your API key to app_id variable
     url = base_url + city_id + '&appid=' + app_id
     response = requests.get(url)
     return response.status_code, response.json()
