@@ -1,4 +1,5 @@
 import requests, json, time
+import config
 
 # Function to load the json file containing the details of cities,
 # and to create a dictionary of Indian cities with their names as keys and
@@ -14,8 +15,9 @@ def setup(city_code):
 # and to return the status code and json-encoded content of the reponse, if any.
 def fetch_data(city_id):
     base_url = 'https://api.openweathermap.org/data/2.5/weather?id='
-    api_key = '6e2a2c5a38b575aba171493127e807a9'
-    url = base_url + city_id + '&appid=' + api_key
+    # Refer to README.md for instructions on API key generation and creation of configuration file
+    app_id = config.api_key
+    url = base_url + city_id + '&appid=' + app_id
     response = requests.get(url)
     return response.status_code, response.json()
 
