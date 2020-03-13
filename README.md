@@ -16,6 +16,14 @@
   * Sunrise time (local time; IST in India)
   * Sunset time (local time; IST in India)
   
+### Instructions on API Key Generation and Creation of Configuration File
+  1. Sign Up and get your __Openweather API__ API key (APPID) [here](https://openweathermap.org/appid).
+  2. After cloning this repository to your local system, create a __config.py__ file in the same repository.
+  3. Add the following Python statement to __config.py__ :
+  ```python
+  api_key = '<your_api_key_here>'
+  ```
+  
 ### Modules Used
 
 * [*__requests__*](https://pypi.org/project/requests/)
