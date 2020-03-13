@@ -10,12 +10,6 @@ def setup(city_code):
         if city['country'] == 'IN':
             city_code[city['name'].lower()] = str(city['id'])
 
-# Function to check if the user-entered city is present in the given list of cities,
-# and to return its ID.
-def find_city_id(city_name, city_code):
-    if city_name in city_code:
-        return city_code[city_name]
-
 # Function to fetch the response to the HTTP request to get the weather information of the city,
 # and to return the status code and json-encoded content of the reponse, if any.
 def fetch_data(city_id):
@@ -32,11 +26,13 @@ def main():
     setup(city_code)
     print('\nWEATHER INDIA\n')
     city_name = input('Enter an Indian city\'s name: ').lower()
-    city_id = find_city_id(city_name, city_code)
+    # Check if the user-entered city is present in the given list of cities, and to assign its ID
+    if city_name in city_code:
+        city_id = city_code[city_name]
     if city_id:
         status_code, data = fetch_data(city_id)
         if status_code == 200:
-            conv = 273.15   # conversion factor to convert temp. from K to C scale
+            conv = 273.15   # Conversion factor to convert temp. from K to C scale
             name = data['name']
             weather = {
             'main': data['weather'][0]['main'],
