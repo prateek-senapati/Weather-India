@@ -17,7 +17,7 @@ def find_city_id(city_name, city_code):
         return city_code[city_name]
 
 # Function to fetch the response to the HTTP request to get the weather information of the city,
-# and to return the status code and json equivalent of the response.
+# and to return the status code and json-encoded content of the reponse, if any.
 def fetch_data(city_id):
     base_url = 'https://api.openweathermap.org/data/2.5/weather?id='
     api_key = '6e2a2c5a38b575aba171493127e807a9'
