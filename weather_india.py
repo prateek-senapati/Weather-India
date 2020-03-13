@@ -72,9 +72,9 @@ def main():
             print(f'Cloudiness: {cloudiness} %')
             sunrise, sunset = sun_time['sunrise'], sun_time['sunset']
             print('Sunrise Time:  ' + sunrise[2] + ' ' + sunrise[1] + ' ' \
-            + sunrise[-1] + ' (' + sunrise[0] + ') ' + sunrise[-2] + ' UTC')
+            + sunrise[-1] + ' (' + sunrise[0] + ') ' + sunrise[-2] + ' IST (local time)')
             print('Sunset Time:  ' + sunset[2] + ' ' + sunset[1] + ' ' \
-            + sunset[-1] + ' (' + sunset[0] + ') ' + sunset[-2] + ' UTC\n')
+            + sunset[-1] + ' (' + sunset[0] + ') ' + sunset[-2] + ' IST (local time)\n')
         else:
             print('\nUnsuccessful HTTP request :(')
     else:
